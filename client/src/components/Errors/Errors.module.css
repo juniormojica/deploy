@@ -1,0 +1,11 @@
+.errorsContainer{
+  
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;
+}
+
+.errorsContainer figure img {
+    width: 300px;
+}
