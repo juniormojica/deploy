@@ -15,14 +15,14 @@ export const FILTER_WEIGHT_TABLE = "FILTER_WEIGHT_TABLE"
 
 export const getAllDogs = () => {
     return async (dispatch) => {
-        const response = await axios.get(`http://localhost:3001/dogs`)
+        const response = await axios.get(`/dogs`)
         return dispatch({ type: GET_ALL_DOGS, payload: response.data })
     }
 }
 
 export const dogDetail = (id) => {
     return async (dispatch) => {
-        const response = await axios.get(`http://localhost:3001/dogs/${id}`)
+        const response = await axios.get(`/dogs/${id}`)
 
         return dispatch({ type: GET_DOG_DETAIL, payload: response.data })
     }
@@ -44,7 +44,7 @@ export const cleanDetail = () => {
 
 export const getTemperaments = () => {
     return async (dispatch) => {
-        const response = await axios.get("http://localhost:3001/temperaments")
+        const response = await axios.get("/temperaments")
         return dispatch({ type: GET_TEMPERAMENTS, payload: response.data })
     }
 }
